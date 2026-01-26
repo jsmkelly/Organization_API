@@ -1,17 +1,19 @@
-﻿using Microsoft.Data.SqlClient;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Data.SqlClient;
 using System.Data;
 
-namespace Organization_API
+namespace Organization_API.Controllers
 {
-    /// <summary>
-    /// A base controller class that manages SQL database connections and other general functionalities.
-    /// </summary>
-    public static class SQLActions
+    public class BaseController : ControllerBase
     {
+        protected ActionResult result;
+        protected string body = "";
         private static SqlCommand sqlCommand = new SqlCommand();
+        //oridinarily connection strings would be stored in a secure configuration file or environment variable
+        //but this is demonstration of the API functionality
         private const string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Organization;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False";
 
-        public static DataTable GetData(string SQL)
+        protected static DataTable GetData(string SQL)
         {
             DataTable dataTable = new DataTable();
             sqlCommand.CommandText = SQL;

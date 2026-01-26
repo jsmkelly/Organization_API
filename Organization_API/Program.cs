@@ -21,6 +21,4 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.MapOrganizationEndpoints();
-
 app.Run();
