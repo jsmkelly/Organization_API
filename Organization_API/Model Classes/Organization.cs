@@ -9,7 +9,7 @@ namespace Organization_API
         private string _id = "";
         private List<Organization> _subOrganizations = null!;
         private List<OrganizationType> _type = null!;
-        private Address _address = null!;
+        private List<Address> _addresses = null!;
         private List<Member> _members = null!;
 
         public Organization(string name, string id)
@@ -22,7 +22,7 @@ namespace Organization_API
         public string OrganizationId { get => _id; set => _id = value; }
         public List<Organization> SubOrganizations { get => _subOrganizations; set => _subOrganizations = value; }
         public List<OrganizationType> Type { get => _type; set => _type = value; }
-        public Address Address { get => _address; set => _address = value; }
+        public List<Address> Addresses { get => _addresses; set => _addresses = value; }
         public List<Member> Members { get => _members; set => _members = value; }
     }
 
