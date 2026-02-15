@@ -20,10 +20,35 @@ namespace Organization_API
 
         public string Name { get => _name; set => _name = value; }
         public string OrganizationId { get => _id; set => _id = value; }
-        public List<Organization> SubOrganizations { get => _subOrganizations; set => _subOrganizations = value; }
-        public List<OrganizationType> Type { get => _type; set => _type = value; }
-        public List<Address> Addresses { get => _addresses; set => _addresses = value; }
-        public List<Member> Members { get => _members; set => _members = value; }
+
+        public void AddAddress(Address address)
+        {
+            //only add if the an address is provided
+            if (address.Street.Trim() == "" & address.State.Trim() == "" &
+               address.City.Trim() == "" & address.Country.Trim() == "")
+            {
+                //do not add an empty address
+            }
+            else
+            {
+                _addresses.Add(address);
+            }
+        }
+
+        public List<Address> Addresses
+        {
+            get
+            {
+                if (_addresses.Count > 0)
+                {
+                    return _addresses;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+        }
     }
 
 }
