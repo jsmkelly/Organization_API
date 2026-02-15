@@ -7,10 +7,10 @@ namespace Organization_API
     {
         private string _name = "";
         private string _id = "";
-        private List<Organization> _subOrganizations = null!;
-        private List<OrganizationType> _type = null!;
-        private List<Address> _addresses = null!;
-        private List<Member> _members = null!;
+        private List<Organization> _subOrganizations = new List<Organization>();
+        private List<OrganizationType> _type = new List<OrganizationType>();
+        private List<Address> _addresses = new List<Address>();
+        private List<Member> _members = new List<Member>();
 
         public Organization(string name, string id)
         {

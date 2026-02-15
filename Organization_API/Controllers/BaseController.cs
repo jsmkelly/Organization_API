@@ -11,7 +11,7 @@ namespace Organization_API.Controllers
         private static SqlCommand sqlCommand = new SqlCommand();
         //oridinarily connection strings would be stored in a secure configuration file or environment variable
         //but this is demonstration of the API functionality
-        private const string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Organization;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False";
+        private const string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=E:\\repos\\Organization_API\\Organization_API\\Data\\Organization.mdf;Integrated Security=True";
 
         protected static DataTable GetData(string SQL)
         {
