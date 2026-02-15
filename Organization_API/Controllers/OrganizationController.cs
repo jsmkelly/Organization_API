@@ -143,6 +143,25 @@ namespace Organization_API.Controllers
                         }
                     }
 
+                    //make sure that 
+                    //if any of the lists are empty, we set them to null so they don't show up in the response
+                    if (org.Addresses.Count == 0)
+                    {
+                        org.Addresses = null;
+                    }
+                    if (org.Members.Count == 0)
+                    {
+                        org.Members = null;
+                    }
+                    if (org.SubOrganizations.Count == 0)
+                    {
+                        org.SubOrganizations = null;
+                    }
+                    if (org.Type.Count == 0)
+                    {
+                        org.Type = null;
+                    }
+
                     organizations.Data.Add(org);
                 }
 
@@ -254,6 +273,25 @@ namespace Organization_API.Controllers
                         {
 
                         }
+                    }
+
+                    //make sure that 
+                    //if any of the lists are empty, we set them to null so they don't show up in the response
+                    if (org.Addresses.Count == 0)
+                    {
+                        org.Addresses = null;
+                    }
+                    if(org.Members.Count == 0)
+                    {
+                        org.Members = null;
+                    }
+                    if(org.SubOrganizations.Count == 0)
+                    {
+                        org.SubOrganizations = null;
+                    }
+                    if(org.Type.Count == 0)
+                    {
+                        org.Type = null;
                     }
 
                     organizations.Data.Add(org);

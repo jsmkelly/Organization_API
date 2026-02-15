@@ -20,66 +20,10 @@ namespace Organization_API
 
         public string Name { get => _name; set => _name = value; }
         public string OrganizationId { get => _id; set => _id = value; }
-        public List<Organization> SubOrganizations
-        {
-            get
-            {
-                if (SubOrganizations.Count == 0)
-                {
-                    return null!;
-                }
-                else
-                {
-                    return _subOrganizations;
-                }
-            }
-            set => _subOrganizations = value;
-        }
-        public List<OrganizationType> Type
-        {
-            get
-            {
-                if (Type.Count == 0)
-                {
-                    return null!;
-                }
-                else
-                {
-                    return _type;
-                }
-            }
-            set => _type = value;
-        }
-        public List<Address> Addresses
-        {
-            get
-            {
-                if (Addresses.Count == 0)
-                {
-                    return null!;
-                }
-                else
-                {
-                    return _addresses;
-                }
-            }
-            set => _addresses = value;
-        }
-        public List<Member> Members
-        {
-            get
-            {
-                if (Members.Count == 0)
-                {
-                    return null!;
-                }
-                else
-                {
-                    return _members;
-                }
-            }
-            set => _members = value;
-        }
+        public List<Organization> SubOrganizations { get => _subOrganizations; set => _subOrganizations = value; }
+        public List<OrganizationType> Type { get => _type; set => _type = value; }
+        public List<Address> Addresses { get => _addresses; set => _addresses = value; }
+        public List<Member> Members { get => _members; set => _members = value; }
     }
 
 }
